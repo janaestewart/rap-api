@@ -44,7 +44,7 @@ app.get('/api/rappers/:rapperName',(request, response )=>{
 })  //instead of responding with whole rapper object we're now going to do a specific rapper. now think about parameters :rapperName. our api will now listen to any value inside the url. With that const rapperName whenever there's a request we're able to peel of :rapperName and just show that info. 
 //conditional says if the name is in the object respond with their name...if their name is not there respond with unknown
 
- app.listen(PORT, ()=>{
+ app.listen(process.env.PORT || PORT, ()=>{
      console.log(`Serve running on port ${PORT}`)
  }) // listen() is another method that comes with express...takes in a port and a callback
  //lets create the port as a variables. do it at the top
