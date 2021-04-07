@@ -24,6 +24,7 @@ let rappers = {
 }
 
 app.use(cors()) //have to remember to tell it to use cors
+//what does cors do...client side code and server code in different places. so cors module helps with this
 
 app.get('/',(request, response) => {
     response.sendFile(__dirname + '/index.html')
